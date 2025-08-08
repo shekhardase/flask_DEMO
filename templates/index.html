@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flask Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      :root {
+        --primary-color: #7c3aed; /* Purple */
+        --secondary-color: #f3e8ff; /* Light purple */
+        --accent-color: #a21caf; /* Deep purple */
+        --text-color: #2d0a4b; /* Dark purple */
+        --border-radius: 12px;
+        --feature1: #c084fc; /* Lavender */
+        --feature2: #f472b6; /* Pink */
+        --feature3: #38bdf8; /* Blue */
+        --feature4: #facc15; /* Yellow */
+        --feature5: #34d399; /* Green */
+        --feature6: #f87171; /* Red */
+        --feature7: #fbbf24; /* Orange */
+        --feature8: #818cf8; /* Indigo */
+      }
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f8fafc;
+        color: var(--text-color);
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background: var(--primary-color);
+        color: #fff;
+        padding: 2rem 0 1rem 0;
+        text-align: center;
+        border-bottom-left-radius: var(--border-radius);
+        border-bottom-right-radius: var(--border-radius);
+        box-shadow: 0 2px 12px rgba(124, 58, 237, 0.08);
+      }
+      main {
+        max-width: 700px;
+        margin: 2rem auto;
+        background: #fff;
+        padding: 2rem;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 24px rgba(124, 58, 237, 0.06);
+      }
+      h1 {
+        margin-top: 0;
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+        color: #fff;
+        background: none;
+        -webkit-background-clip: unset;
+        -webkit-text-fill-color: unset;
+        background-clip: unset;
+      }
+      h2 {
+        color: var(--accent-color);
+      }
+      .features {
+        display: flex;
+        gap: 2rem;
+        margin: 2rem 0;
+        flex-wrap: wrap;
+      }
+      .feature-card {
+        flex: 1 1 200px;
+        background: #f3e8ff;
+        border-radius: var(--border-radius);
+        padding: 1.5rem;
+        box-shadow: 0 2px 12px rgba(162, 28, 175, 0.05);
+        transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+        color: var(--text-color);
+        position: relative;
+        overflow: hidden;
+        border: 1px solid #ede9fe;
+      }
+      .feature-card:nth-child(2) {
+        background: #e0e7ff;
+      }
+      .feature-card:nth-child(3) {
+        background: #f1f5f9;
+      }
+      .feature-card:hover {
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 0 8px 32px rgba(124, 58, 237, 0.1);
+        background: #ede9fe;
+        color: var(--text-color);
+      }
+      .feature-title {
+        color: var(--primary-color);
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+      }
+      .feature-card:hover .feature-title {
+        color: var(--accent-color);
+        text-shadow: none;
+      }
+      code {
+        background: var(--secondary-color);
+        color: var(--accent-color);
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 1em;
+      }
+      footer {
+        text-align: center;
+        padding: 1rem 0;
+        color: #a78bfa;
+        font-size: 0.95rem;
+        background: #f3e8ff;
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
+        margin-top: 2rem;
+      }
+      @media (max-width: 600px) {
+        main {
+          padding: 1rem;
+        }
+        .features {
+          flex-direction: column;
+          gap: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to the Flask Demo!</h1>
+      <p>Build modern web apps with Python and Flask</p>
+    </header>
+    <main>
+      <section>
+        <h2>About This Project</h2>
+        <p>
+          This demo showcases a simple Flask application with a clean and modern
+          HTML/CSS layout. Flask is a lightweight web framework for Python,
+          perfect for rapid development and prototyping.
+        </p>
+      </section>
+      <section class="features">
+        <div class="feature-card">
+          <div class="feature-title">🚀 Fast Development</div>
+          <div>
+            Flask enables quick setup and iteration, making it ideal for MVPs
+            and prototypes.
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-title">🔒 Secure</div>
+          <div>
+            Built-in security features and easy integration with authentication
+            libraries.
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-title">⚙️ Flexible</div>
+          <div>
+            Minimalistic core with powerful extensions for databases, forms, and
+            more.
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Get Started</h2>
+        <ol>
+          <li>Clone the repository</li>
+          <li>
+            Install dependencies: <code>pip install -r requirements.txt</code>
+          </li>
+          <li>Run the app: <code>flask run</code></li>
+        </ol>
+      </section>
+    </main>
+    <footer>
+      &copy; 2024 Flask Demo. Powered by Flask &mdash; Designed by GitHub
+      Copilot.
+    </footer>
+  </body>
+</html>
