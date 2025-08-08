@@ -1,0 +1,21 @@
+
+# Version of the Docker Compose file format. '3.8' is a good, modern choice.
+version: '3.8'
+
+# 'services' is where you define each container of your application.
+services:
+  # We'll name our first service 'web'. You can name it anything.
+  web:
+    # 'build: .' tells Docker Compose to look for a Dockerfile in the
+    # current directory and build an image from it.
+    build: .
+    # 'ports' maps ports from the host machine to the container.
+    # This maps port 5000 on your computer to port 5000 in the container.
+    ports:
+      - "5000:5000"
+    # 'volumes' can be used to mount your local code into the container
+    # for live-reloading during development. This is optional.
+    # The line below means the current directory on your host is mapped
+    # to the /app directory inside the container.
+    volumes:
+      - .:/app
